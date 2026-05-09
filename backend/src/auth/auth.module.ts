@@ -5,6 +5,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { JwtStrategy } from './strategies/jwt.strategy';
+import { DemoModule } from '../demo/demo.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
         secret: config.get<string>('JWT_SECRET'),
       }),
     }),
+    DemoModule,
   ],
   providers: [AuthService, JwtStrategy],
   controllers: [AuthController],

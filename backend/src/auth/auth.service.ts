@@ -5,6 +5,9 @@ import { PrismaService } from '../prisma/prisma.service';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import { ConfigService } from '@nestjs/config';
+import { DemoService } from '../demo/demo.service';
+
+const DEMO_EMAIL = 'demo@fintrack.app';
 
 @Injectable()
 export class AuthService {
@@ -12,6 +15,7 @@ export class AuthService {
     private prisma: PrismaService,
     private jwt: JwtService,
     private config: ConfigService,
+    private demo: DemoService,
   ) {}
 
   async register(dto: RegisterDto) {
@@ -37,6 +41,12 @@ export class AuthService {
 
     const passwordMatch = await bcrypt.compare(dto.password, user.passwordHash);
     if (!passwordMatch) throw new UnauthorizedException('Email veya şifre hatalı');
+
+    if (dto.email === DEMO_EMAIL) {
+      await this.demo.reset();
+      const freshUser = await this.prisma.user.findUnique({ where: { email: DEMO_EMAIL } });
+      return this.signTokens(freshUser!.id, freshUser!.email);
+    }
 
     return this.signTokens(user.id, user.email);
   }

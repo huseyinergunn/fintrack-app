@@ -12,8 +12,8 @@ type Summary = { overdueCount: number; pendingCount: number };
 
 const NAV_ITEMS = [
   { href: '/dashboard', label: 'Dashboard', icon: BarChart3 },
-  { href: '/invoices', label: 'Satışlar', icon: FileText },
-  { href: '/expenses', label: 'Ödemeler', icon: CreditCard, badgeKey: 'overdue' as const },
+  { href: '/invoices', label: 'Satışlar', icon: FileText, badgeKey: 'overdue' as const },
+  { href: '/expenses', label: 'Ödemeler', icon: CreditCard },
   { href: '/clients', label: 'Müşteriler', icon: Users },
   { href: '/reports', label: 'Raporlar', icon: FileBarChart },
   { href: '/trash', label: 'Çöp Kutusu', icon: Trash2 },
