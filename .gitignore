@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+.next/
+dist-seed/
+
+# Environment files — NEVER commit
+.env
+.env.local
+.env.production
+.env*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Prisma generated / compiled seed
+backend/src/generated/
+backend/prisma/seed.js
+backend/prisma/seed.js.map
+backend/prisma/seed.d.ts
+dist-seed/
+
+# Claude Code internal
+.claude/
+
+# Reports / docs generated during development
+ARCHITECTURAL_REPORT.md

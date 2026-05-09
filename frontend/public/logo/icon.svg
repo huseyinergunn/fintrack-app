@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M45 75V55C45 49.4772 49.4772 45 55 45H75" stroke="#10B981" stroke-width="10" stroke-linecap="round"/>
+  <path d="M125 45H145C150.523 45 155 49.4772 155 55V75" stroke="#10B981" stroke-width="10" stroke-linecap="round"/>
+  <path d="M155 125V145C155 150.523 150.523 155 145 155H125" stroke="#10B981" stroke-width="10" stroke-linecap="round"/>
+  <path d="M75 155H55C49.4772 155 45 150.523 45 145V125" stroke="#10B981" stroke-width="10" stroke-linecap="round"/>
+
+  <rect x="65" y="60" width="70" height="85" rx="2" fill="white" stroke="#D1D5DB" stroke-width="1"/>
+
+  <rect x="73" y="72" width="54" height="3" rx="1.5" fill="#E5E7EB"/>
+  <rect x="73" y="80" width="54" height="3" rx="1.5" fill="#E5E7EB"/>
+  <rect x="73" y="88" width="40" height="3" rx="1.5" fill="#E5E7EB"/>
+  <rect x="73" y="96" width="54" height="3" rx="1.5" fill="#E5E7EB"/>
+
+  <path d="M110 120H125V124H114V128H122V132H114V140H110V120Z" fill="#10B981"/>
+
+  <rect x="73" y="132" width="25" height="8" rx="1" fill="#10B981" fill-opacity="0.1"/>
+</svg>
